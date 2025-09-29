@@ -1,0 +1,89 @@
+Body {
+  margin: 0;
+  height: 100vh;
+  background-color: #000;
+  color: #eee;
+  overflow: hidden;
+}
+
+span {
+  background: url("https://cdn1.iconfinder.com/data/icons/line-christmas-icons/75/_snowflake-1024.png");
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  pointer-events: none;
+  background-size: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: animate 6s linear forwards;
+}
+
+/* النجمة */
+.star {
+  background: url("https://cdn4.iconfinder.com/data/icons/3d-winter-illustration/512/snowflake_crystal_ice_winter_weather.png"); /* ضع هنا رابط صورة تلج شفافة (PNG) */
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  position: absolute;
+  pointer-events: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: animate 6s linear forwards;
+}
+
+/* شكل التلج */
+.snow {
+  background: url("https://cdn0.iconfinder.com/data/icons/christmas-line-2/512/ChristmasTime_Ice-1024.png"); 
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  position: absolute;
+  pointer-events: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: animate 6s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -5000%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}
+h1 {
+  text-align: center;
+}
+
+
+#start-msg {
+  position: fixed;
+  inset: 0;                      /* يغطي الشاشة كلها */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.8);    /* خلفية شفافة */
+  color: #fff;
+  font-size: 60px;
+  font-family: sans-serif;
+  z-index: 9999;
+  transition: opacity 0.6s ease;  /* تلاشي سلس */
+}
+#start-msg.hide {
+  opacity: 0;
+  pointer-events: none;           /* لا يعيق التفاعل بعد الاختفاء */
+}
+
+#start-msg.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 2s ease;  /* بدل 0.6s إلى 2s أو أكتر */
+}

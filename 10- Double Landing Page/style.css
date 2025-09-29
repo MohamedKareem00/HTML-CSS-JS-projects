@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h1 {
+  font-size: clamp(2rem, 8vw, 5rem);
+  color: aliceblue;
+  backdrop-filter: brightness(.5);
+  letter-spacing: 4px;
+  z-index: 1; /* فوق الـ overlay */
+  position: relative;
+}
+.btn {
+  background-color: black;
+  color: white;
+  padding: 20px 40px;
+  font-size: 25px;
+  border: 4px solid;
+  cursor: pointer;
+  transition: 1s background-color;
+  white-space: nowrap;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+.split {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+}
+.split.left {
+  position: absolute;
+  left: 0;
+  background-color: pink;
+  background-image: url(https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17pro-digitalmat-gallery-3-202509?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=ekJPc2lPUlRuRk50SkcyOVdnU1d0TjFla0N0Znl3UThxdjB3SW91ZDVJeGNmQmJPaDM2aGx4aDFNbXhCczNyV28xUkhYejcxalRvY0FPQVpMcmoxMDlLQzdVZ2V3VnpqcXFKTGxlK1dFUXhxRHVRU1Y3V3BkbTR4MkxPZTk5REQ);
+  background-size: cover;
+}
+.split.right {
+  position: absolute;
+  right: 0;
+  background-color: lightblue;
+  background-image: url(https://btech.com/media/catalog/product/cache/22b1bed05f04d71c4a848d770186c3c4/3/b/3b325b9febf142c246dc5e917f97583b54603d65f0128a6970697ce550258366.webp);
+  background-size: cover;
+}
+.active-left .left {
+  width: 75%;
+}
+.active-left .right {
+  width: 25%;
+}
+.active-right .left {
+  width: 25%;
+}
+.active-right .right {
+  width: 75%;
+}
+
+.left , .right {
+  transition: width 2s ease-in-out;
+}
+
+.split.left,
+.split.right {
+  /* background-size: contain; */
+  background-repeat: no-repeat;
+  background-position: center;
+}

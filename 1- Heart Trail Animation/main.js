@@ -17,7 +17,7 @@ bodyEl.addEventListener("mousemove", (event) => {
     el.style.height = size + "px";
 
     bodyEl.appendChild(el);
-    setTimeout(() => el.remove(), 50000);
+    setTimeout(() => el.remove(), 1000);
   }
 
   // قلب دائمًا

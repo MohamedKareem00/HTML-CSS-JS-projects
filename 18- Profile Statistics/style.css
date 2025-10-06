@@ -1,0 +1,53 @@
+/* بنشيل المسافات من الصفحة ونخلي العناصر في النص */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: yellow;
+  font-family: cursive;
+}
+
+/* كل مربع إحصائية */
+.stats-container {
+  margin: 20px;
+  border: dotted green;
+  min-width: 200px;
+  height: 100px;
+  position: relative;
+  padding: 20px;
+}
+/* عنوان الاحصائيه */
+.stats-container h4 {
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+/* الأيقونة اللي فوق الرقم */
+.icon {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+ /* الرقم نفسه */
+.counter {
+  font-size: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: green;
+}
+
+/* لما الشاشة تكون صغيرة، نخلي المربعات تحت بعض */
+@media (max-width: 500px) {
+  body {
+    flex-direction: column;
+  }
+}

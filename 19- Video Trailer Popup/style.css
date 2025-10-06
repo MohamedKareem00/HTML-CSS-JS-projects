@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-color: black;
+}
+
+/* الحاوية الأساسية للمحتوى */
+.main-container {
+  max-width: 550px;
+  padding: 10px;
+}
+
+/* صورة الفيلم */
+.main-container img {
+  max-width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+/* عنوان الفيلم */
+.main-container h1 {
+  color: white;
+  font-weight: 500;
+}
+
+/* وصف الفيلم */
+.main-container p {
+  color: white;
+  margin: 15px 0;
+}
+
+/* الزرار */
+.btn {
+  background-color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+/* تأثير عند المرور على الزر */
+.btn:hover {
+  background-color: orangered;
+  color: white;
+}
+
+/* نافذة الفيديو */
+.trailer-container {
+  position: fixed; /* لتظهر فوق باقي العناصر */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.7s;
+}
+
+/* الحالة "active" لإخفاء الفيديو */
+.trailer-container.active {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* إعدادات الفيديو نفسه */
+.trailer-container video {
+  position: relative;
+  width: 100%;
+  max-width: 550px; /* نفس مقاس الصورة في .main-container */
+  border-radius: 10px;
+  outline: none;
+}
+
+
+/* للشاشات الصغيرة (الموبايل أو التابلت) */
+@media (max-width: 991px) {
+  .trailer-container video {
+    max-width: 90%;
+  }
+}
+
+
+/* أيقونة الإغلاق */
+.close-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: white;
+  cursor: pointer;
+}

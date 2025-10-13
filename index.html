@@ -6,6 +6,13 @@
     <title>Document</title>
     <style>
       body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+      .container {
         display: grid;
         justify-content: center;
         align-items: center;
@@ -16,7 +23,6 @@
         padding: 10px;
         gap: 10px;
       }
-
       a {
         display: block;
         aspect-ratio: 3 / 1;
@@ -31,8 +37,7 @@
         border-radius: 10px;
         text-decoration: none;
         font-size: 1.6rem;
-        transition: 0.3s;
-        font-family: "Courier New", Courier, monospace;
+        transition: 0.5s;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       }
 
@@ -45,7 +50,7 @@
       }
 
       @media (max-width: 767px) {
-        body {
+        .container {
           grid-template-columns: repeat(1, 1fr);
         }
         a {
@@ -55,7 +60,7 @@
 
       /* شاشات متوسطة (تابلت) */
       @media (min-width: 767px) and (max-width: 1023px) {
-        body {
+        .container {
           grid-template-columns: repeat(3, 1fr);
         }
         a {
@@ -65,7 +70,7 @@
 
       /* شاشات كبيرة */
       @media (min-width: 1024px) {
-        body {
+        .container {
           grid-template-columns: repeat(5, 1fr);
         }
         a {
@@ -75,8 +80,9 @@
     </style>
   </head>
   <body>
-    <a href="./1- Heart Trail Animation/index.html">1- Heart Trail Animation</a>
-    <a href="./2- Auto Text Effect Animation/index.html"
+    <div class="container">
+      <a href="./1- Heart Trail Animation/index.html">1- Heart Trail Animation</a>
+      <a href="./2- Auto Text Effect Animation/index.html"
       >2- Auto Text Effect
     </a>
     <a href="./3- mini-calendar/index.html">3- mini-calendar</a>
@@ -85,12 +91,12 @@
     <a href="./6- Dark Mode Toggle/index.html">6- Dark Mode Toggle</a>
     <a href="./7- Testimonial Slider/index.html">7- Testimonial Slider</a>
     <a href="./8- Real-time Character Counter/index.html"
-      >8- Real-time Character</a
+    >8- Real-time Character</a
     >
     <a href="./9- Digital Clock/index.html">9- Digital Clock</a>
     <a href="./11- Random Color Generator/index.html">10- Random Color</a>
     <a href="./12- Preview-Rotating Image Gallery/index.html"
-      >11- Preview-Rotating</a
+    >11- Preview-Rotating</a
     >
     <a href="./13- Animated Search Bar/index.html">12- Animated Search Bar</a>
     <a href="./14- Loan Calculator/index.html">13- loen Calculator</a>
@@ -103,8 +109,9 @@
     <a href="./Solar System Animation/">20- Solar System</a>
     <a href="./21- Clock/index.html">21- clock</a>
     <a href="./22- Temperature Convertor/index.html"
-      >22- Temperature Convertor</a
+    >22- Temperature Convertor</a
     >
     <a href="./23- BMI Calculator/index.html">23- BMI Calculator</a>
+  </div>
   </body>
 </html>
